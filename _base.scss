@@ -1,0 +1,111 @@
+.flex-container {
+    display:flex;
+    align-items: center;
+     
+           }
+header { 
+        width: 100vw;   
+        height: 32px;
+        margin-top: 67px;
+        position: fixed;
+        z-index: 10;
+        justify-content:space-between;
+                       
+
+    .site-title {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    }
+    .left-controls {
+        
+        margin-left: 61px;
+        
+    }
+
+    .link-fonts {
+        @extend .nunito-extrabold;
+        font-size: 14px;
+        color:#1a1a1d;
+        text-decoration: unset;
+        
+        &:hover {
+           color:rgba(26, 26, 29, 0.5);
+        }
+    }
+    .search-controls {
+
+        margin-right: 66px;
+    }
+    
+    .icon-button {
+        background-color: transparent;
+        border:none;
+        outline: unset;
+        padding: 0;
+            }
+    .clients-link {
+        margin-right:46px;
+        margin-left: 53px;
+           }
+    footer {
+            max-height: 230px;
+            
+    .footer-info       {
+            padding:2.55vw 3.17vw 2.55vw 3.17vw;
+            justify-content:space-between;
+            height: 6.4vw;
+    }
+          
+     .right-part {
+            height: 100%;
+            position:relative;
+            
+
+        }      
+       .newsletter {
+        font-size: 0.7vw;
+        line-height: 2.14;
+        letter-spacing: 2.8px;
+        color:$primary-color;
+        text-transform: uppercase;
+       }   
+
+       .letter {
+       width: 20px;
+       height: 16px;
+       }     
+
+       .social-nets {
+           right:0;
+           bottom:0;
+           width:9.58vw;
+           position: absolute;
+           justify-content: space-between;
+           .social-net {
+           cursor: pointer;
+           }
+       }
+
+       .left-part {
+           height:100%;
+           max-width:458px;
+           width:24vw;
+           position: relative;
+           display:flex;
+           flex-direction: column;
+         
+
+           
+       }
+       .designed-by {
+           position: absolute;
+           bottom:0;
+           left:0;
+           color: #77777e;
+           font-size: 0.75vw;
+           
+                 }
+         }
+    
