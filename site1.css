@@ -370,15 +370,29 @@ template {
           align-items: center;
 }
 
-header {
+body {
   width: 100vw;
-  height: 32px;
-  margin-top: 67px;
+  max-width: 1920px;
+}
+
+@media screen and (orientation: portrait) {
+  body {
+    width: 100vw;
+  }
+}
+
+header {
+  max-width: 1920px;
+  max-height: 32px;
+  height: 3vh;
+  margin-top: 6vh;
   position: fixed;
   z-index: 10;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  right: 0;
+  left: 0;
 }
 
 header .site-title {
@@ -386,14 +400,15 @@ header .site-title {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  font-size: 2vh;
 }
 
 .left-controls {
-  margin-left: 61px;
+  margin-left: 3.2vh;
 }
 
 .link-fonts {
-  font-size: 14px;
+  font-size: 1.3vh;
   color: #1a1a1d;
   text-decoration: unset;
 }
@@ -403,7 +418,7 @@ header .site-title {
 }
 
 .search-controls {
-  margin-right: 66px;
+  margin-right: 3.4vw;
 }
 
 .icon-button {
@@ -414,8 +429,8 @@ header .site-title {
 }
 
 .clients-link {
-  margin-right: 46px;
-  margin-left: 53px;
+  margin-right: 2.4vw;
+  margin-left: 2.7vw;
 }
 
 footer {
@@ -458,8 +473,21 @@ footer .social-nets {
           justify-content: space-between;
 }
 
+@media screen and (orientation: portrait) {
+  footer .social-nets {
+    left: 0;
+    right: unset;
+  }
+}
+
 footer .social-nets .social-net {
   cursor: pointer;
+}
+
+@media screen and (orientation: portrait) {
+  footer .social-nets .social-net {
+    margin-right: 2vw;
+  }
 }
 
 footer .left-part {
@@ -484,19 +512,24 @@ footer .designed-by {
   font-size: 0.75vw;
 }
 
-.burgermenu {
-  width: 20px;
-  height: 14px;
+.fa-bars {
+  font-size: 1.5vh;
 }
 
-.search {
-  width: 20px;
-  height: 20px;
+.fa-search {
+  font-size: 1.5vh;
 }
 
 .first-screen {
   height: 100vh;
   position: relative;
+  max-height: 1080px;
+}
+
+@media screen and (orientation: portrait) {
+  .first-screen {
+    height: auto;
+  }
 }
 
 .first-screen .main-content {
@@ -509,11 +542,29 @@ footer .designed-by {
   bottom: 0;
 }
 
+@media screen and (orientation: portrait) {
+  .first-screen .main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-height: 100vw;
+    height: unset;
+    position: static;
+  }
+}
+
 .first-screen .main-content .slider-meta {
   position: relative;
   width: 25vw;
   max-width: 480px;
   height: 100%;
+}
+
+@media screen and (orientation: portrait) {
+  .first-screen .main-content .slider-meta {
+    height: unset;
+  }
 }
 
 .first-screen .main-content .slide-content {
@@ -523,6 +574,13 @@ footer .designed-by {
           flex-grow: 1;
   position: relative;
   background-color: #e2e8e8;
+}
+
+@media screen and (orientation: portrait) {
+  .first-screen .main-content .slide-content {
+    width: 90vw;
+    height: 70vw;
+  }
 }
 
 .first-screen .main-content .slide-button {
@@ -553,6 +611,15 @@ footer .designed-by {
   left: 0.15vw;
 }
 
+@media screen and (orientation: portrait) {
+  .first-screen .main-content .slide-button {
+    top: 2vw;
+    right: 2vw;
+    height: 10vw;
+    width: 10vw;
+  }
+}
+
 .first-screen .main-content .slide-title {
   position: absolute;
   bottom: 0;
@@ -563,12 +630,20 @@ footer .designed-by {
   height: 8vh;
   background-color: #ffffff;
   line-height: 2.14;
-  letter-spacing: 2.8px;
+  letter-spacing: 0.15vw;
   line-height: 8vh;
   color: #87bbbc;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.3vh;
+}
+
+@media screen and (orientation: portrait) {
+  .first-screen .main-content .slide-title {
+    width: 40vw;
+    height: 10vw;
+    line-height: 10vw;
+  }
 }
 
 .rectangle-with-background {
@@ -580,6 +655,12 @@ footer .designed-by {
   background-image: linear-gradient(225deg, #b4d3d3, #d9e7e7);
   top: 0;
   right: 0;
+}
+
+@media screen and (orientation: portrait) {
+  .rectangle-with-background {
+    height: 80vw;
+  }
 }
 
 .person-info {
@@ -606,10 +687,29 @@ footer .designed-by {
   z-index: 2;
 }
 
+@media screen and (orientation: portrait) {
+  .person-info.active:before {
+    display: none;
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .person-info {
+    left: -30vw;
+    top: 30vw;
+  }
+}
+
 .person-name {
   font-size: 10.5vh;
   letter-spacing: 2px;
   margin: 0;
+}
+
+@media screen and (orientation: portrait) {
+  .person-name {
+    font-size: 3vh;
+  }
 }
 
 .person-job {
@@ -625,6 +725,14 @@ footer .designed-by {
   bottom: 8vh;
   position: absolute;
   width: 100%;
+  font-size: 1.1vh;
+}
+
+@media screen and (orientation: portrait) {
+  .slider-control {
+    position: static;
+    bottom: 0;
+  }
 }
 
 .slider-arrows {
@@ -640,10 +748,15 @@ footer .designed-by {
   height: 1.29vh;
 }
 
+@media screen and (orientation: portrait) {
+  .fa-long-arrow-alt-right {
+    margin-left: 10vw;
+  }
+}
+
 .slider-pages {
   color: rgba(105, 105, 112, 0.7);
   letter-spacing: 2.4px;
-  font-size: 12px;
   padding-left: 0;
   margin: 0;
   margin-top: 3.8vh;
@@ -653,9 +766,15 @@ footer .designed-by {
   list-style: none;
 }
 
+@media screen and (orientation: portrait) {
+  .slider-pages {
+    display: none;
+  }
+}
+
 .slider-page {
   opacity: 0.7px;
-  margin-top: 41px;
+  margin-top: 3.8vh;
   cursor: pointer;
   position: relative;
 }
@@ -685,6 +804,15 @@ footer .designed-by {
   height: 100vh;
 }
 
+@media screen and (orientation: portrait) {
+  .second-screen {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    max-height: unset;
+  }
+}
+
 .second-screen .profile-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -695,12 +823,32 @@ footer .designed-by {
   padding: 6.25vw 10.7vh;
 }
 
+@media screen and (orientation: portrait) {
+  .second-screen .profile-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 4vw 4vw;
+  }
+}
+
 .second-screen .person-photo-container {
   max-width: 649px;
-  max-height: 948px;
+  height: 948px;
   width: 34vw;
   height: 85vh;
   position: relative;
+}
+
+@media screen and (orientation: portrait) {
+  .second-screen .person-photo-container {
+    width: 60vw;
+    height: 70vw;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
 }
 
 .second-screen .person-photo {
@@ -723,6 +871,13 @@ footer .designed-by {
   width: 22,8vw;
 }
 
+@media screen and (orientation: portrait) {
+  .second-screen .text {
+    max-width: unset;
+    width: unset;
+  }
+}
+
 .second-screen .detailed-info-person {
   width: 50%;
   display: -webkit-box;
@@ -731,6 +886,13 @@ footer .designed-by {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (orientation: portrait) {
+  .second-screen .detailed-info-person {
+    width: 80vw;
+    height: 40%;
+  }
 }
 
 .second-screen .links-info-person {
@@ -818,6 +980,13 @@ footer .designed-by {
   max-height: 1080px;
 }
 
+@media screen and (orientation: portrait) {
+  .third-screen {
+    max-height: unset;
+    height: unset;
+  }
+}
+
 .third-screen .press-related-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,10 +997,28 @@ footer .designed-by {
   padding: 0vh 11vh 0vh 11vh;
 }
 
+@media screen and (orientation: portrait) {
+  .third-screen .press-related-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0vh 5vh 0vh 5vh;
+  }
+}
+
 .third-screen .press-related-content {
   padding: 17vh 0px 22vh 11vh;
   max-width: 571px;
   width: 53vh;
+}
+
+@media screen and (orientation: portrait) {
+  .third-screen .press-related-content {
+    width: unset;
+    max-width: unset;
+    padding: 5vh 0px 5vh 0px;
+  }
 }
 
 .third-screen .press-head {
@@ -851,6 +1038,12 @@ footer .designed-by {
   bottom: -1.85vh;
 }
 
+@media screen and (orientation: portrait) {
+  .third-screen .press-head {
+    font-size: 3vh;
+  }
+}
+
 .news {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -861,6 +1054,12 @@ footer .designed-by {
   margin-bottom: 1.2vh;
 }
 
+@media screen and (orientation: portrait) {
+  .news {
+    margin-top: 6vh;
+  }
+}
+
 .new {
   margin-bottom: 5vh;
   display: -webkit-box;
@@ -869,6 +1068,12 @@ footer .designed-by {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (orientation: portrait) {
+  .new {
+    margin-bottom: 2vh;
+  }
 }
 
 .event {
@@ -911,6 +1116,12 @@ footer .designed-by {
   margin-right: 2.2vw;
 }
 
+@media screen and (orientation: portrait) {
+  .video {
+    width: 40vw;
+  }
+}
+
 .video i {
   display: none;
 }
@@ -944,6 +1155,13 @@ footer .designed-by {
   background-color: #e2e8e8;
 }
 
+@media screen and (orientation: portrait) {
+  .big-photo {
+    height: 60vh;
+    width: 90%;
+  }
+}
+
 .play-icon {
   max-width: 27px;
   max-height: 34px;
@@ -966,6 +1184,12 @@ footer .designed-by {
           justify-content: space-between;
 }
 
+@media screen and (orientation: portrait) {
+  .fourth-screen {
+    padding: 4vw;
+  }
+}
+
 .fourth-screen .clients-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -973,6 +1197,16 @@ footer .designed-by {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (orientation: portrait) {
+  .fourth-screen .clients-info {
+    margin-left: 4vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .fourth-screen .clients-info-head {
@@ -984,6 +1218,13 @@ footer .designed-by {
       flex-shrink: 1;
 }
 
+@media screen and (orientation: portrait) {
+  .fourth-screen .clients-info-head {
+    font-size: 5vw;
+    margin-left: 0vw;
+  }
+}
+
 .fourth-screen .clients-info-head.active:before {
   content: '';
   position: absolute;
@@ -991,7 +1232,15 @@ footer .designed-by {
   height: 0.2vh;
   background-color: #1a1a1d;
   display: inline-block;
-  bottom: -20px;
+  bottom: -2vh;
+}
+
+@media screen and (orientation: portrait) {
+  .fourth-screen .clients-info-head.active:before {
+    bottom: 0;
+    top: 4.5vh;
+    width: 12vw;
+  }
 }
 
 .fourth-screen .some-description-text {
@@ -1015,8 +1264,22 @@ footer .designed-by {
       flex-shrink: 2;
 }
 
+@media screen and (orientation: portrait) {
+  .fourth-screen .some-description-text {
+    width: unset;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+  }
+}
+
 .fourth-screen .link-explore-more {
   bottom: 0;
+}
+
+@media screen and (orientation: portrait) {
+  .fourth-screen .link-explore-more {
+    bottom: 5vw;
+  }
 }
 
 .fourth-screen .photo-container {
@@ -1024,6 +1287,17 @@ footer .designed-by {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-top: 12vh;
+}
+
+@media screen and (orientation: portrait) {
+  .fourth-screen .photo-container {
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 6vh;
+  }
 }
 
 .fourth-screen .photo-item {
@@ -1034,6 +1308,13 @@ footer .designed-by {
   background-color: #d3dcdc;
   position: relative;
   cursor: pointer;
+}
+
+@media screen and (orientation: portrait) {
+  .fourth-screen .photo-item {
+    width: 40vw;
+    max-height: 20vh;
+  }
 }
 
 .fourth-screen .photo-item .photo-item-content {
