@@ -395,6 +395,12 @@ header {
   left: 0;
 }
 
+@media screen and (orientation: portrait) {
+  header {
+    margin-top: unset;
+  }
+}
+
 header .site-title {
   position: absolute;
   left: 50%;
@@ -545,12 +551,13 @@ footer .designed-by {
 @media screen and (orientation: portrait) {
   .first-screen .main-content {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     max-height: 100vw;
     height: unset;
     position: static;
+    width: 100vw;
   }
 }
 
@@ -564,6 +571,16 @@ footer .designed-by {
 @media screen and (orientation: portrait) {
   .first-screen .main-content .slider-meta {
     height: unset;
+    max-width: unset;
+    width: unset;
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 
@@ -578,7 +595,10 @@ footer .designed-by {
 
 @media screen and (orientation: portrait) {
   .first-screen .main-content .slide-content {
-    width: 90vw;
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
+    width: 100vw;
     height: 70vw;
   }
 }
@@ -613,8 +633,12 @@ footer .designed-by {
 
 @media screen and (orientation: portrait) {
   .first-screen .main-content .slide-button {
-    top: 2vw;
-    right: 2vw;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     height: 10vw;
     width: 10vw;
   }
@@ -659,7 +683,7 @@ footer .designed-by {
 
 @media screen and (orientation: portrait) {
   .rectangle-with-background {
-    height: 80vw;
+    display: none;
   }
 }
 
@@ -695,8 +719,16 @@ footer .designed-by {
 
 @media screen and (orientation: portrait) {
   .person-info {
-    left: -30vw;
-    top: 30vw;
+    top: unset;
+    -webkit-transform: unset;
+            transform: unset;
+    left: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
@@ -728,13 +760,6 @@ footer .designed-by {
   font-size: 1.1vh;
 }
 
-@media screen and (orientation: portrait) {
-  .slider-control {
-    position: static;
-    bottom: 0;
-  }
-}
-
 .slider-arrows {
   position: absolute;
   bottom: 0;
@@ -749,8 +774,14 @@ footer .designed-by {
 }
 
 @media screen and (orientation: portrait) {
+  .slider-arrows {
+    z-index: 2;
+  }
+}
+
+@media screen and (orientation: portrait) {
   .fa-long-arrow-alt-right {
-    margin-left: 10vw;
+    margin-left: 30vw;
   }
 }
 
@@ -905,6 +936,12 @@ footer .designed-by {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media screen and (orientation: portrait) {
+  .second-screen .links-info-person {
+    margin-top: 2vw;
+  }
 }
 
 .second-screen .links-info-person .link-info-person {

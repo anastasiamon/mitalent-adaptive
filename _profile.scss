@@ -26,11 +26,11 @@
         
         @media screen and (orientation: portrait) {
                           
-            flex-direction:column;                     
+            flex-direction:column-reverse;                     
             max-height: 100vw;              
             height: unset;           
             position: static;     
-           
+            width: 100vw;  
         }
     
     
@@ -40,10 +40,14 @@
             max-width: 480px;
             height: 100%;
 
-            @media screen and (orientation: portrait) {
-                       
-            height:unset;
-            
+            @media screen and (orientation: portrait) {                       
+            height:unset;          
+            max-width: unset;
+            width: unset;
+            position: static;       
+            display:flex;
+            flex-direction:column-reverse;
+                   
             }
         
         }
@@ -56,8 +60,8 @@
             background-color: #e2e8e8;            
                         
     @media screen and (orientation: portrait) {
-        
-        width: 90vw;
+        flex-grow: unset;
+        width: 100vw;
         height: 70vw;    
               
               }
@@ -83,9 +87,11 @@
                 left:0.15vw;       
                      }       
         @media screen and (orientation: portrait) {
-            top:2vw;
-            right:2vw;
-            height: 10vw;
+            top:50%;
+            left:50%;
+            transform:translateX(-50%);
+            transform:translateY(-50%);
+            height:10vw;
             width:10vw;
                       }       
         }
@@ -127,7 +133,7 @@
         right: 0;
         @media screen and (orientation: portrait) {
            
-            height: 80vw;
+            display:none;
                   
                   }
                      
@@ -158,9 +164,13 @@
  
     }
     @media screen and (orientation: portrait) {
-       left:-30vw;
-       top:30vw;
+        top:unset;
+        transform:unset;
+        left:unset;
+        display:flex;
+        justify-content:flex-start;
               }
+
 }
     .person-name {
         font-size: 10.5vh;
@@ -178,7 +188,9 @@
         line-height: 0.99;
         letter-spacing: 2px;
         text-transform: uppercase;
-        
+        @media screen and (orientation: portrait) {
+           
+          }
     }
     .slider-control {
         left:0;
@@ -187,8 +199,7 @@
         width: 100%;      
         font-size: 1.1vh;
         @media screen and (orientation: portrait) {
-         position:static;
-         bottom:0;
+     
                        
               }     
         
@@ -203,11 +214,13 @@
        width: 0.9vw;
        height: 1.29vh;
       }
-             
-  }
+      @media screen and (orientation: portrait) {
+       z-index:2;
+      }
+           }
     .fa-long-arrow-alt-right{
         @media screen and (orientation: portrait) {
-            margin-left:10vw;
+            margin-left:30vw;
           }
     }
 
@@ -328,7 +341,11 @@
         font-size: 1vh;
         letter-spacing: 2.4px;
         text-transform:uppercase;
-        justify-content: space-between;           
+        justify-content: space-between;    
+        @media screen and (orientation: portrait){
+            margin-top: 2vw;
+                    }
+
     
         
         .link-info-person {

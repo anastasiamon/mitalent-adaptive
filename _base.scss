@@ -8,7 +8,7 @@ body {
     width:100vw;
     max-width:1920px;
     @media screen and (orientation: portrait) {
-   
+      
         width:100vw;
     }
 }
@@ -22,7 +22,12 @@ header {
         z-index: 10;
         justify-content:space-between;
         right: 0;
-        left: 0;              
+        left: 0;         
+        
+        @media screen and (orientation: portrait) {
+           margin-top: unset;
+           
+        }     
 
     .site-title {
         position: absolute;
