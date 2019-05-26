@@ -26,8 +26,8 @@
             </div>
                 <div class="slider-control">
                 <div class="slider-arrows">
-                    <i class="fas fa-long-arrow-alt-left active"></i>
-                    <i class="fas fa-long-arrow-alt-right"></i>
+                    <i class="fas fa-long-arrow-alt-left slider-left-arrow" onclick="doSlide(-1)"></i>
+                    <i class="fas fa-long-arrow-alt-right slider-right-arrow" onclick="doSlide(1)"></i>
                     
                 </div>
                 <ul class="slider-pages nunito-extrabold">
@@ -42,21 +42,26 @@
             </div>
             
             <div class="slide-content">
-                <div class="slide-video"></div>
-                <div class="slide-button"><i class="fas fa-play"></i></div>
+                <div class="slide-video">
+
+                    <iframe class="main-video" src="https://www.youtube.com/embed/i0UK_hhNMfc?enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                
+                
+                </div>
+                <!-- <div class="slide-button"><i class="fas fa-play"></i></div> -->
                 <div class="slide-title nunito-extrabold">enquire about derek</div>
             </div>   
             </div>
              </section>
             <section class="second-screen">
                 <div class="profile-content">
-                <div class="person-photo-container">          
-                <div class="person-photo"></div>
+                <div class="person-photo-container">         
+                <div class="person-photo"><img class="changed-photo" src="https://cdn-03.independent.ie/style/celebrity/celebrity-news/article37866116.ece/097c2/AUTOCROP/w620/ipanews_cbc3aeeb-0628-4b80-8370-0cd43cbc3929_1"></img></div>
                 <ul class="photo-slider flex-container">
-                    <li class="photo-slide"></li>
-                    <li class="photo-slide active"></li>
-                    <li class="photo-slide"></li>
-                    <li class="photo-slide"></li>
+                    <li class="photo-slide" onClick="frw(1)"></li>
+                    <li class="photo-slide" onClick="frw(2)"></li>
+                    <li class="photo-slide" onClick="frw(3)"></li>
+                    <li class="photo-slide"onClick="frw(4)"></li>
                 </ul>
                 </div>
                 
@@ -117,7 +122,7 @@
         </div>     
         </div>
   
-             <div class="big-photo"></div>
+             <div class="big-photo"><img class="static-photo" src="https://cdn-03.independent.ie/style/celebrity/celebrity-news/article37866116.ece/097c2/AUTOCROP/w620/ipanews_cbc3aeeb-0628-4b80-8370-0cd43cbc3929_1"></img></div>
              </div>
             </div>
 
@@ -133,7 +138,7 @@
             </div>   
             </div>
             <div class="photo-container flex-container">
-                <div class="photo-item">
+                <div class="photo-item" id="1">
                     <div class="photo-item-content">
                         <i class="fas fa-external-link-square-alt"></i>
                         <div class="photo-item-text">
@@ -142,7 +147,7 @@
                         </div>
                         </div>
                     </div>
-                    <div class="photo-item">
+                    <div class="photo-item" id="2">
                             <div class="photo-item-content">
                                 <i class="fas fa-external-link-square-alt"></i>
                                 <div class="photo-item-text">
@@ -151,7 +156,7 @@
                                 </div>
                                 </div>
                             </div> 
-                            <div class="photo-item active">
+                            <div class="photo-item active" id="3">
                                     <div class="photo-item-content">
                                         <i class="fas fa-external-link-square-alt"></i>
                                         <div class="photo-item-text">
@@ -160,7 +165,7 @@
                                         </div>
                                         </div>
                                     </div> 
-                                    <div class="photo-item">
+                                    <div class="photo-item" id="4">
                                             <div class="photo-item-content">
                                                 <i class="fas fa-external-link-square-alt"></i>
                                                 <div class="photo-item-text">
@@ -180,6 +185,11 @@
                 </ul>
             </div>
             </section>
+            <script 
+            src="https://code.jquery.com/jquery-3.4.0.min.js"
+            integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+            crossorigin="anonymous"></script>
+            <script src="site.js"></script>
             </body>
             <footer>
                 <div class="footer-info flex-container">

@@ -66,6 +66,11 @@
               
               }
                    }
+
+        .main-video {
+            height:100%;
+            width: 100%;
+        }          
                 
         .slide-button{
             position: absolute;
@@ -87,10 +92,9 @@
                 left:0.15vw;       
                      }       
         @media screen and (orientation: portrait) {
-            top:50%;
+            top:44%;
             left:50%;
-            transform:translateX(-50%);
-            transform:translateY(-50%);
+            transform:translateX(-50%);            
             height:10vw;
             width:10vw;
                       }       
@@ -167,8 +171,8 @@
         top:unset;
         transform:unset;
         left:unset;
-        display:flex;
-        justify-content:flex-start;
+        margin-left: initial;
+       
               }
 
 }
@@ -178,6 +182,7 @@
         margin: 0;
         @media screen and (orientation: portrait) {
           font-size:3vh;
+          
         }
 
   }
@@ -189,9 +194,10 @@
         letter-spacing: 2px;
         text-transform: uppercase;
         @media screen and (orientation: portrait) {
-           
+            
+        }
           }
-    }
+    
     .slider-control {
         left:0;
         bottom:8vh;
@@ -218,10 +224,18 @@
        z-index:2;
       }
            }
-    .fa-long-arrow-alt-right{
+
+        .slider-right-arrow{
+        cursor:pointer;  
+        font-size:20px;      
         @media screen and (orientation: portrait) {
             margin-left:30vw;
           }
+    }
+
+    .slider-left-arrow {
+        cursor:pointer; 
+        font-size:20px; 
     }
 
 .slider-pages {
@@ -302,6 +316,10 @@
          width: 100%;
         background-color: #e2e8e8;
         
+    }
+    .changed-photo {
+        height: 100%;
+         width: 100%;
     }
 
     .photo-slider{
@@ -564,15 +582,32 @@
     max-height: 1080px;
     width:44vw;
     height: 100vh;
-    background-color: #e2e8e8;
+    background-color: #e2e8e8;    
+
 
     @media screen and (orientation: portrait) {
     
         height: 60vh;        
         width:90%;     
        
-    }
+    }   
     
+}
+
+.static-photo {
+
+    max-width: 839px;
+    max-height: 1080px;
+    width:44vw;
+    height: 100vh; 
+
+
+    @media screen and (orientation: portrait) {
+    
+        height: 60vh;        
+        width:90%;     
+       
+    }   
     
 }
 .play-icon {

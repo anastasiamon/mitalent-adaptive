@@ -603,6 +603,11 @@ footer .designed-by {
   }
 }
 
+.first-screen .main-content .main-video {
+  height: 100%;
+  width: 100%;
+}
+
 .first-screen .main-content .slide-button {
   position: absolute;
   max-height: 106px;
@@ -633,12 +638,10 @@ footer .designed-by {
 
 @media screen and (orientation: portrait) {
   .first-screen .main-content .slide-button {
-    top: 50%;
+    top: 44%;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
     height: 10vw;
     width: 10vw;
   }
@@ -723,12 +726,7 @@ footer .designed-by {
     -webkit-transform: unset;
             transform: unset;
     left: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    margin-left: initial;
   }
 }
 
@@ -779,10 +777,20 @@ footer .designed-by {
   }
 }
 
+.slider-right-arrow {
+  cursor: pointer;
+  font-size: 20px;
+}
+
 @media screen and (orientation: portrait) {
-  .fa-long-arrow-alt-right {
+  .slider-right-arrow {
     margin-left: 30vw;
   }
+}
+
+.slider-left-arrow {
+  cursor: pointer;
+  font-size: 20px;
 }
 
 .slider-pages {
@@ -886,6 +894,11 @@ footer .designed-by {
   height: 100%;
   width: 100%;
   background-color: #e2e8e8;
+}
+
+.second-screen .changed-photo {
+  height: 100%;
+  width: 100%;
 }
 
 .second-screen .photo-slider {
@@ -1194,6 +1207,20 @@ footer .designed-by {
 
 @media screen and (orientation: portrait) {
   .big-photo {
+    height: 60vh;
+    width: 90%;
+  }
+}
+
+.static-photo {
+  max-width: 839px;
+  max-height: 1080px;
+  width: 44vw;
+  height: 100vh;
+}
+
+@media screen and (orientation: portrait) {
+  .static-photo {
     height: 60vh;
     width: 90%;
   }
